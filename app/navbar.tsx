@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 
 const Navbar = () => {
   const [isitthere, Setisithere] = useState(false);
@@ -9,11 +9,11 @@ const Navbar = () => {
     Setisithere(!isitthere);
   };
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: { target: { value: SetStateAction<string>; }; }) => {
     setSearchQuery(e.target.value);
   };
 
-  const handleEnterKeyPress = (e) => {
+  const handleEnterKeyPress = (e: { key: string; }) => {
     if (e.key === "Enter") {
       // Navigate to the search result page
       window.location.href = `/search/${encodeURIComponent(searchQuery)}`;
