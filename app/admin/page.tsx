@@ -32,7 +32,7 @@ const ADMINPAGE = () => {
     img:""
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: any; value: any; }; }) => {
     const { name, value } = e.target;
     setBlogData((prevData) => ({
       ...prevData,
@@ -43,7 +43,7 @@ const ADMINPAGE = () => {
 
   const [item, setItem] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     if (!e) {
       // Handle the case where the event object is null or undefined
@@ -54,7 +54,7 @@ const ADMINPAGE = () => {
     setItem('');
   };
 
-  const handleblogFormSubmit = async (e) => {
+  const handleblogFormSubmit = async (e: { preventDefault: () => void; target: HTMLFormElement | undefined; }) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const title = formData.get('title');
