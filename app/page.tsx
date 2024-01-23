@@ -85,7 +85,7 @@ export default function Home() {
       </div>
       <div className="text-black max-w-[66rem] m-auto">
         {All.slice(8, 11).map((blogs) => (
-          <div className="border-2 border-yellow-400 rounded-lg m-2 transition-all duration-300 text-yellow-400 hover:text-black hover:bg-yellow-400">
+          <div key={blogs.id} className="border-2 border-yellow-400 rounded-lg m-2 transition-all duration-300 text-yellow-400 hover:text-black hover:bg-yellow-400">
           <a key={blogs.id} href={`./article/${blogs.id}`}>
             <div className="flex gap-2 p-2">
             <div className="relative overflow-hidden w-[700px] flex justify-center">
