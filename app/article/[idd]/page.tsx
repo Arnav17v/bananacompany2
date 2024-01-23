@@ -4,7 +4,7 @@ import Footer from "@/app/footer";
 import Navbar from "@/app/navbar";
 import { useState, useEffect } from "react";
 
-const Tarticle = ({ params }) => {
+const Tarticle = ({ params }:{params:any}) => {
   const [selectedBlog, setSelectedBlog] = useState({});
   const [blogFound, setBlogFound] = useState(false);
 

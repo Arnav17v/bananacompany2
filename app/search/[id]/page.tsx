@@ -3,7 +3,7 @@ import Navbar from "@/app/navbar";
 import blogs from "@/app/blogs.json";
 import Footer from "@/app/footer";
 
-const DocsIdPage = ({ params }) => {
+const DocsIdPage = ({ params}:{params:any}) => {
     const searchRes = params.id ? decodeURIComponent(params.id) : '';
   console.log(searchRes);
   const filteredBlogs = blogs.filter(
