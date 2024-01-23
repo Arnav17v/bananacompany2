@@ -71,10 +71,10 @@ export default function Home() {
       <div className=" w-full h-[400px] transition-all duration-700 items-center flex bg-yellow-400 my-16 py-4 overflow-x-auto">
         <div className="flex gap-2 m-auto max-w-[66rem]">
           {All.slice(5, 8).map((blogs) => (
-            <a href={`./article/${blogs.id}`}>
+            <a key={blogs.id} href={`./article/${blogs.id}`}>
               <div className="isthisit w-[350px] h-[350px] hover:bg-black transition-all duration-700 hover:text-yellow-400 text-black text-6xl rounded-lg border-4 border-black">
-                <div>{blogs.title}</div>
-                <div className="text-xl text-yellow-400 pt-6">
+                <div key={blogs.id}>{blogs.title}</div>
+                <div key={blogs.id} className="text-xl text-yellow-400 pt-6">
                   {blogs.content}
                 </div>
               </div>
@@ -85,17 +85,18 @@ export default function Home() {
       <div className="text-black max-w-[66rem] m-auto">
         {All.slice(8, 11).map((blogs) => (
           <div className="border-2 border-yellow-400 rounded-lg m-2 transition-all duration-300 text-yellow-400 hover:text-black hover:bg-yellow-400">
-          <a  href={`./article/${blogs.id}`}>
+          <a key={blogs.id} href={`./article/${blogs.id}`}>
             <div className="flex gap-2 p-2">
             <div className="relative overflow-hidden w-[700px] flex justify-center">
               <img
+                key={blogs.id}
                 className={`w-[697px] hover:scale-110 transition-all duration-700`}
                 src={`${blogs.img}`}
               />
             </div>
               <div className=" rounded-lg p-4 overflow-y-auto ">
-                <div className="text-4xl mb-6">{blogs.title}</div>
-                <div className="text-2xl">{blogs.content}</div>
+                <div key={blogs.id} className="text-4xl mb-6">{blogs.title}</div>
+                <div key={blogs.id} className="text-2xl">{blogs.content}</div>
               </div>
             </div>
           </a>
