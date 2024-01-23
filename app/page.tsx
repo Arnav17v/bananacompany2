@@ -13,57 +13,58 @@ export default function Home() {
     <>
       <Navbar/>
       <div className="flex py-4 gap-6 max-w-[66rem] m-auto">
-        <a href={`./article/${All[0].id}`}>
+        <a key={All[0].id} href={`./article/${All[0].id}`}>
           <div className="hover:-translate-y-10 hover:-translate-x-10 transition-all duration-700">
             <div className="relative overflow-hidden w-[700px] flex justify-center">
               <img
+                key={All[0].id}
                 className={`w-[697px] hover:scale-110 transition-all duration-700`}
                 src={`${All[0].img}`}
               />
             </div>
             <div className="p-4 mb-4 text-yellow-400 bg-black z-10  flex flex-col w-[597px] ">
-              <span className="text-4xl">{All[0].title}</span>
-              <span className="text-white">{All[0].content}</span>
+              <span key={All[0].id} className="text-4xl">{All[0].title}</span>
+              <span key={All[0].id} className="text-white">{All[0].content}</span>
             </div>
           </div>
         </a>
         <div>
-          <a href={`./article/${All[1].id}`}>
+          <a key={All[1].id} href={`./article/${All[1].id}`}>
             <div>
-              <img className={`h-[350px] w-[5x]`} src={`${All[1].img}`} />
+              <img key={All[1].id} className={`h-[350px] w-[5x]`} src={`${All[1].img}`} />
               <div className="text-yellow-400 bg-black z-10  flex flex-col w-[350px] ">
-                <span className="text-4xl">{All[1].title}</span>
-                <span className="text-white">{All[1].content}</span>
+                <span key={All[1].id} className="text-4xl">{All[1].title}</span>
+                <span key={All[1].id} className="text-white">{All[1].content}</span>
               </div>
             </div>
           </a>
-          <a href={`./article/${All[2].id}`}>
+          <a key={All[2].id} href={`./article/${All[2].id}`}>
             <div>
-              <img className={`h-[350px] w-[5x]`} src={`${All[2].img}`} />
+              <img key={All[2].id} className={`h-[350px] w-[5x]`} src={`${All[2].img}`} />
               <div className="text-yellow-400 bg-black z-10  flex flex-col w-[350px] ">
-                <span className="text-4xl">{All[2].title}</span>
-                <span className="text-white">{All[2].content}</span>
+                <span key={All[2].id} className="text-4xl">{All[2].title}</span>
+                <span key={All[2].id} className="text-white">{All[2].content}</span>
               </div>
             </div>
           </a>
         </div>
       </div>
       <div className="flex py-4 gap-6 w-[66rem] m-auto">
-        <a href={`./article/${All[3].id}`}>
+        <a key={All[3].id} href={`./article/${All[3].id}`}>
           <div>
-            <img className={`h-[350px] w-[5x]`} src={`${All[3].img}`} />
+            <img key={All[3].id} className={`h-[350px] w-[5x]`} src={`${All[3].img}`} />
             <div className="text-yellow-400 bg-black z-10  flex flex-col w-[350px] ">
-              <span className="text-4xl">{All[3].title}</span>
-              <span className="text-white">{All[3].content}</span>
+              <span key={All[3].id} className="text-4xl">{All[3].title}</span>
+              <span key={All[3].id} className="text-white">{All[3].content}</span>
             </div>
           </div>
         </a>
-        <a href={`./article/${All[4].id}`}>
+        <a key={All[4].id} href={`./article/${All[4].id}`}>
           <div>
-            <img className={`h-[350px] w-[5x]`} src={`${All[4].img}`} />
+            <img key={All[4].id} className={`h-[350px] w-[5x]`} src={`${All[4].img}`} />
             <div className="text-yellow-400 bg-black z-10  flex flex-col w-[350px] ">
-              <span className="text-4xl">{All[4].title}</span>
-              <span className="text-white">{All[4].content}</span>
+              <span key={All[4].id} className="text-4xl">{All[4].title}</span>
+              <span key={All[4].id} className="text-white">{All[4].content}</span>
             </div>
           </div>
         </a>
