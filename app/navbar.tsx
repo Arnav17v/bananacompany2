@@ -23,7 +23,7 @@ const Navbar = () => {
     <>
       <div className="m-auto max-w-[88rem] px-[6.25rem] pt-[2rem] pb-[4rem] flex items-center justify-between font-inter text-[2rem] font-extrabold leading-normal">
         <div>
-          <Link className="hover:text-yellow-400" href={"../"}>Banana</Link>
+          <Link className="hover:text-yellow-400" href={"./"}>Banana</Link>
         </div>
         <div>
         <button onClick={thisfunc}>🍌</button>
