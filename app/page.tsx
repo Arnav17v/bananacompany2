@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <Navbar/>
       <div className="flex py-4 gap-6 max-w-[66rem] m-auto">
-        <a key={All[0].id} href={`./article/${All[0].id}`}>
+        <Link key={All[0].id} href={`./article/${All[0].id}`}>
           <div className="hover:-translate-y-10 hover:-translate-x-10 transition-all duration-700">
             <div className="relative overflow-hidden w-[700px] flex justify-center">
               <img
@@ -27,7 +27,7 @@ export default function Home() {
               <span key={All[0].id} className="text-white">{All[0].content}</span>
             </div>
           </div>
-        </a>
+        </Link>
         <div>
           <a key={All[1].id} href={`./article/${All[1].id}`}>
             <div>
