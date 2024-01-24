@@ -16,7 +16,7 @@ const Navbar = () => {
   const handleEnterKeyPress = (e: { key: string; }) => {
     if (e.key === "Enter") {
       // Navigate to the search result page
-      window.location.href = `/search/${encodeURIComponent(searchQuery)}`;
+      window.location.href = `./search/${encodeURIComponent(searchQuery)}`;
     }
   };
   return (
